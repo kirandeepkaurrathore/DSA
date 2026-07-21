@@ -11,11 +11,13 @@ bool isPalindrome(string s){
         while((st<end)&& !isalnum(s[end])){
             end--;
         }
-        if(tolower(s[st]!=tolower(s[end]))){
+        if(tolower(s[st])!=tolower(s[end]))){
             return false;
         }
-        return true;
+        st++;
+        end--;
     }
+    return true;
 }
 
 int main(){
